@@ -2,7 +2,6 @@
 <?php include 'navbar.php'; ?>
 <?php include 'functions.php'; ?>
 <?php require '../includes/db.php';?>
-<?php include 'helper.php'; ?>
 <?php 
  function delete($table, $colName, $id) {
         global $mysqli;
@@ -29,21 +28,22 @@ if(isset($_GET['delete_course']) && $_GET['delete_course'] !== '') {
 //Edit, Update, modify post
 global $connection;
 if (isset($_POST['modify'])) {
+
 	$eid = $_POST['editID'];
 	$title = $_POST['title'];
 	$category = $_POST['category'];
-	$author = $_POST['author'];
+	$content = $_POST['content'];
 	
 
 
 	
-	$query = mysqli_query($connection, "UPDATE posts SET post_title='$title', post_author='$author',  post_image='$image' WHERE post_id='$eid' ");
+	$query = mysqli_query($mysqli, "UPDATE courses SET name='$title', cat='$category',  description='$content' WHERE id='$eid' ");
 	if($query) {
 		$_SESSION['SuccessMessage'] = "Post Edited Succesfully Succesfully";
-		header("Location: posts.php");
+		header("Location: view_course.php");
 	} else {
 		$_SESSION['ErrorMessage'] = "Cannot Edit Post";
-		echo  'failed'.mysqli_error($connection);
+		echo  'failed'.mysqli_error($mysqli);
 	}
 	//echo "<script>alert('$eid');</script>";
 

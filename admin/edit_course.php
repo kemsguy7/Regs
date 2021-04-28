@@ -50,7 +50,7 @@ include('sessions.php');
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-3 col-6">
+          <div class="col-md-12 col-6">
             <!-- small box -->
             
        
@@ -58,12 +58,17 @@ include('sessions.php');
 
   <h2>Edit Course</h2>
   
-    <form action="includes/functions.php" method="post" enctype="multipart/form-data">
+    <form action="courses.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="">Course Title</label>
         <input type="text" name="title" placeholder="Post Title" class="form-control"value="<?php echo $title; ?>">
       </div>
      
+     <div class="form-group">  
+        <label for=""> </label>
+         <input type ="text" name="editID" class="form-control" value="<?php echo $edit_id; ?>" style="display: none;">
+     </div>
+
       <div class="form-group">
         <label for="">Course Category</label>
       <select class="form-control" name="category" value="<?php echo $category; ?>">
@@ -76,12 +81,12 @@ include('sessions.php');
       
       <div class="form-group">
         <label for="">Course Description</label>
-        <textarea name="content" rows="8" cols="80" class="form-control" 
-        value="<?php echo $description; ?>"> </textarea>
+        <textarea name="content" rows="8" cols="80" class="form-control">
+          <?php echo $description; ?> </textarea>
       </div>
       
       <div class="form-group">
-        <input type="submit" name="publish" value="Edit Course"  class="btn btn-primary">
+        <input type="submit" name="modify" value="Edit Course"  class="btn btn-primary">
       </div>
     </form>
   </div>

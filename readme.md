@@ -11,4 +11,4 @@ password: 111111
 The admin folder houses the admin dashboard and related pages
 The includes folder houses the footer, navigation and header pages.
 
-All registration files can be found in the we root directory.
+All registration files can be found in the web root directory.

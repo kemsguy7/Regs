@@ -11,6 +11,6 @@
     if (!$mysqli) {
         trigger_error('Could not connect to MySQl: ' . mysqli_connect_error($mysqli));
     } else {
-        echo "Connection successful";
+
     }
 ?>

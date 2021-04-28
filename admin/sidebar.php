@@ -55,13 +55,8 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Courses</p>
                 </a>
-              </li>S
-              <li class="nav-item">
-                <a href="edit_course.php?" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Edit Course</p>
-                </a>
               </li>
+             
             </ul>
           </li>
           
